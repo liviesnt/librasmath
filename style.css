@@ -59,3 +59,9 @@ nav#menu a {
 nav#menu a:hover {
     color: rgb(9, 3, 71);
 }
+
+/* Plugin do Vlibras */
+[vw-acess-button] {
+    bottom: 60px !important;
+    right: 20px !important;
+}
