@@ -59,3 +59,61 @@ nav#menu a {
 nav#menu a:hover {
     color: rgb(9, 3, 71);
 }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #video-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        iframe {
+            border-radius: 12px;
+            max-width: 100%;
+        }
+
+        #legendas {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        #legendas h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        #video-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #videoId {
+            padding: 10px;
+            width: 300px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        #carregar {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #carregar:hover {
+            background-color: #0055aa;
+        }
