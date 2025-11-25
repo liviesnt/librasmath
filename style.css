@@ -4,6 +4,7 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(16, 16, 107);
+    color: white;
 }
 
 header {
@@ -60,60 +61,88 @@ nav#menu a:hover {
     color: rgb(9, 3, 71);
 }
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+body {
+    font-family: Arial, sans-serif;
+}
 
-        #video-container {
-            text-align: center;
-            margin: 20px auto;
-        }
+#video-container {
+    text-align: center;
+    margin: 20px auto;
+}
 
-        iframe {
-            border-radius: 12px;
-            max-width: 100%;
-        }
+iframe {
+    border-radius: 12px;
+    max-width: 100%;
+}
 
-        #legendas {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 20px auto;
-            width: 80%;
-            text-align: left;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
+#legendas {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+}
 
-        #legendas h3 {
-            margin-top: 0;
-            color: #333;
-        }
+#legendas h3 {
+    margin-top: 0;
+    color: #333;
+    }
 
-        #video-form {
-            text-align: center;
-            margin-top: 20px;
-        }
+#video-form {
+    text-align: center;
+    margin-top: 20px;
+}
 
-        #videoId {
-            padding: 10px;
-            width: 300px;
-            font-size: 1rem;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
+#videoId {
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
 
-        #carregar {
-            padding: 10px 15px;
-            font-size: 1rem;
-            border: none;
-            background-color: #0066cc;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+#carregar {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        #carregar:hover {
-            background-color: #0055aa;
-        }
+#carregar:hover {
+    background-color: #0055aa;
+}
+
+.carrossel-wrapper {
+    overflow: hidden; /* Esconde o conteúdo que está fora da área de visualização */
+    width: 100%;
+}
+
+.carrossel-content {
+    display: flex;
+    /* Largura suficiente para conter todos os blocos */
+    width: 200%; 
+    animation: deslizar 20s linear infinite; /* 20s = duração, ajuste para velocidade */
+}
+
+
+@keyframes deslizar {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        /* Move para a metade da largura, onde o conteúdo repetido começa */
+        transform: translateX(-50%); 
+    }
+}
+
+.carrossel-content:hover {
+    /* Opcional: Para o carrossel quando o mouse estiver sobre ele */
+    animation-play-state: paused; 
+}
