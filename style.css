@@ -119,30 +119,29 @@ iframe {
     background-color: #0055aa;
 }
 
-.carrossel-wrapper {
-    overflow: hidden; /* Esconde o conteúdo que está fora da área de visualização */
-    width: 100%;
-}
-
+/* Estiliza o Container Principal */
 .carrossel-content {
     display: flex;
-    /* Largura suficiente para conter todos os blocos */
-    width: 200%; 
-    animation: deslizar 20s linear infinite; /* 20s = duração, ajuste para velocidade */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Para iOS */
+    scrollbar-width: none; /* Para Firefox */
 }
 
-
-@keyframes deslizar {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        /* Move para a metade da largura, onde o conteúdo repetido começa */
-        transform: translateX(-50%); 
-    }
+.carrossel-content::-webkit-scrollbar {
+    display: none;
 }
 
-.carrossel-content:hover {
-    /* Opcional: Para o carrossel quando o mouse estiver sobre ele */
-    animation-play-state: paused; 
+.bloco-ods {
+    flex: 0 0 calc(100% / 3);
+    min-width: calc(100% / 3);
+    padding: 10px;
+    text-align: center;
 }
+
+.bloco-ods img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
