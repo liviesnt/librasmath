@@ -1,16 +1,10 @@
 @charset "UTF-8";
-@font-face {
-  font-family: 'FonteCorpo';
-  src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
     margin: 0;
     padding: 0;
-    font-family:'FonteCorpo';
-    background-color: rgb(16, 16, 107);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background-color: rgb(69, 69, 203);
     color: rgb(0, 0, 0);
 }
 
@@ -20,6 +14,194 @@ header {
     height: 90px;
     background-color:rgb(255, 255, 255);
 }
+
+div#inicio {
+    color: white;
+    margin: 1px;
+}
+
+.acordeao-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .titulo-objetivo {
+            background-color: #f0f0f0; /* Cor de fundo suave */
+            color: #176B87; /* Cor principal do Libras Math (Sugestão) */
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.05em;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .titulo-objetivo:hover,
+        .titulo-objetivo.ativo {
+            background-color: #C8DCE3; /* Cor destacada ao ativo/hover */
+        }
+
+        .icone-objetivo {
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+
+        .conteudo-funcionamento {
+            padding: 0 20px;
+            background-color: #ffffff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+
+        .conteudo-funcionamento.mostrar {
+            max-height: 500px; /* Suficiente para a maioria dos textos */
+            padding: 15px 20px 20px 20px;
+        }
+        .conteudo-funcionamento p {
+            margin-top: 5px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        formulario-feedback {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        #formulario-feedback h2 {
+            color: #053B50;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .grupo-campo {
+            margin-bottom: 20px;
+        }
+        .grupo-campo label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .grupo-campo input[type="text"],
+        .grupo-campo input[type="email"],
+        .grupo-campo select,
+        .grupo-campo textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que o padding não aumente o tamanho */
+            font-size: 16px;
+        }
+        .grupo-campo textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .botao-enviar {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #176B87;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .botao-enviar:hover {
+            background-color: #053B50;
+        }
+
+        /* --- Estilos do FAQ (Acordeão) --- */
+        #faq-section {
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto 70px auto;
+        }
+        #faq-section h2 {
+            text-align: center;
+            color: #053B50;
+            margin-bottom: 30px;
+        }
+        .acordeao-container {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .item {
+            border-bottom: 1px solid #eee;
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+        .titulo-faq {
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.05em;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .titulo-faq:hover,
+        .titulo-faq.ativo {
+            background-color: #eef;
+            color: #176B87;
+        }
+        .icone-expansao {
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        .titulo-faq.ativo .icone-expansao {
+            transform: rotate(45deg); /* Ícone de + vira x */
+        }
+        .conteudo-resposta {
+            padding: 0 20px;
+            background-color: #ffffff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+        .conteudo-resposta.mostrar {
+            max-height: 500px;
+            padding: 15px 20px 20px 20px;
+        }
+        .conteudo-resposta p {
+            margin-top: 5px;
+            line-height: 1.5;
+            color: #555;
+        }
 
 .logo-projeto  {
     position: absolute;
@@ -66,10 +248,6 @@ nav#menu a {
 
 nav#menu a:hover {
     color: rgb(9, 3, 71);
-}
-
-body {
-    font-family: Arial, sans-serif;
 }
 
 #video-container {
@@ -153,5 +331,18 @@ iframe {
 }
 
 footer#rodape {
-    color:#ffffff;
+    clear: both;
+    border-top: 1px solid #ffffff;
+}
+
+footer#rodape p {
+    text-align: center;
+    color: white;
+}
+
+blockquote#quote {
+    border-left: 5px solid #0056b3; 
+    padding-left: 15px; 
+    margin: 20px 5px; 
+    color: white;
 }

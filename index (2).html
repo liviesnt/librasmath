@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+    <body>
     <div id="interface">
         <header id="cabecalho">
             <img src="librasmath (1).png" alt="Logo Libras Math" class="logo-projeto" />
@@ -28,24 +28,61 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <div>
+    <div id="inicio">
         <h1>Libras Math</h1>
-        <blockquote style="border-left: 5px solid #0056b3; padding-left: 15px; margin: 15px 0; background-color: #f0f8ff;">
+        <blockquote id="quote">
   A Libras Math é uma proposta de uma plataforma educacional para aprender matemática, destinada aos alunos do ensino médio que são deficientes auditivos. <br>O nosso projeto propõe auxiliar alunos na integração digital e acessível em libras, e esperamos uma mudança no ambiente escolar em que os alunos convivem, a fim de ajudá-los a aprenderem na linguagem brasileira de sinais (libras).</br>
 </blockquote>
     </div>
+</head>
 
+    <section id="objetivos-funcionamento">
+        <h2 style="text-align: center; color: #053B50; margin-bottom: 30px;">Objetivos e Mecanismos do Libras Math</h2>
+        
+        <div class="acordeao-container">
+            
+            <div class="item">
+                <button class="titulo-objetivo">
+                    <span class="icone-objetivo">1. 🚀</span> Objetivo: Promover a Acessibilidade e Inclusão Digital
+                </button>
+                <div class="conteudo-funcionamento">
+                    <p><strong>Funcionamento:</strong> O site utiliza o plugin V-Libras e interfaces visuais limpas para garantir a navegação e o consumo de conteúdo em conformidade com as diretrizes de acessibilidade web. Todo o conteúdo matemático é apresentado com legendas.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <button class="titulo-objetivo">
+                    <span class="icone-objetivo">2. 📚</span> Objetivo: Fornecer Conteúdo de Matemática em Libras
+                </button>
+                <div class="conteudo-funcionamento">
+                    <p><strong>Funcionamento:</strong> Desenvolvemos módulos de ensino (Aulas, Exercícios e Revisões) baseados na BNCC para o Ensino Médio. Cada tópico (ex: Funções, Geometria) possui videoaulas gravadas por intérpretes ou professores fluentes em Libras.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <button class="titulo-objetivo">
+                    <span class="icone-objetivo">3. 🤝</span> Objetivo: Criar um Ambiente de Suporte Mútuo
+                </button>
+                <div class="conteudo-funcionamento">
+                    <p><strong>Funcionamento:</strong> As áreas "Guia do Aluno" e "Guia do Professor" oferecem materiais de apoio. O "Fale Conosco" serve como canal para dúvidas e feedback, permitindo o engajamento contínuo com a comunidade escolar.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <div class="carrossel-container">
        <div class="carrossel-content">
-    <div class="bloco-ods"><img src="ods-4.png" alt="ODS 4"/></div>
-    <div class="bloco-ods"><img src="ods-9.png" alt="ODS 9"/></div>
-    <div class="bloco-ods"><img src="ods-16.png" alt="ODS 16"/></div>
+            <div class="bloco-ods"><img src="ods-4.png" alt="ODS 4"/></div>
+            <div class="bloco-ods"><img src="ods-9.png" alt="ODS 9"/></div>
+            <div class="bloco-ods"><img src="ods-16.png" alt="ODS 16"/></div>
        </div>
-</div>
     </div>
+    
     <footer id="rodape">
       <p>Copyright 2025 - by Libras Math <br>
       <a href="https://www.instagram.com/libras.math?igsh=c2lrYm8xcG5sYXNn" target="_blank">Instagram</a>
-</footer>
-</body>
+    </footer>
+    
+    <script src="script.js"></script>
+    </body>
 </html>
