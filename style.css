@@ -82,7 +82,7 @@ div#inicio {
             color: #555;
         }
 
-        formulario-feedback {
+        #formulario-feedback {
             width: 90%;
             max-width: 600px;
             margin: 40px auto;
