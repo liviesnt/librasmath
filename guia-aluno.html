@@ -23,6 +23,79 @@
          </nav>
     </div>
 
+    <style>
+        /* Estilos específicos para a área de mensagem */
+        .mensagem-container {
+            width: 90%;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #f7fcfc; /* Fundo claro para destaque */
+            border-left: 5px solid #176B87; /* Borda de destaque */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+        .mensagem-container h2 {
+            color: #176B87;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .icone-sino {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        #mensagem-recebida {
+            white-space: pre-wrap; /* Preserva quebras de linha */
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            padding: 15px;
+            border: 1px dashed #C8DCE3;
+            border-radius: 4px;
+            min-height: 50px;
+            background-color: #fff;
+        }
+        #mensagem-vazia {
+            color: #999;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+
+<body>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <section class="mensagem-container">
+        <h2><span class="icone-sino">🔔</span> Comunicado do Professor</h2>
+        <p style="color: #666; margin-bottom: 20px;">Esta é a última mensagem enviada pelo seu professor. Utilize o V-Libras para traduzir o conteúdo abaixo.</p>
+        
+        <div id="mensagem-recebida">
+            <p id="mensagem-vazia">Nenhuma mensagem nova do professor foi encontrada.</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var mensagemSalva = localStorage.getItem('mensagemProfessor');
+            var divMensagem = document.getElementById('mensagem-recebida');
+            var mensagemVazia = document.getElementById('mensagem-vazia');
+
+            if (mensagemSalva) {
+                // Exibe o conteúdo e remove a mensagem padrão
+                divMensagem.textContent = mensagemSalva;
+                if (mensagemVazia) {
+                    mensagemVazia.style.display = 'none';
+                }
+            } else {
+                // Garante que a mensagem padrão seja exibida se não houver conteúdo
+                divMensagem.innerHTML = '<p id="mensagem-vazia" style="color: #999; font-style: italic; text-align: center;">Nenhuma mensagem nova do professor foi encontrada.</p>';
+            }
+        });
+    </script>
     <div id="video-form">
         <input type="text" id="videoId" placeholder="Digite o ID ou link do vídeo do YouTube" />
         <button id="carregar">Carregar vídeo</button>
@@ -109,6 +182,12 @@
             }
         }
     </script>
+
+    <footer id="rodape">
+      <p>Copyright 2025 - by Libras Math <br>
+      <a href="https://www.instagram.com/libras.math?igsh=c2lrYm8xcG5sYXNn" target="_blank">Instagram</a>
+    </footer>
+    
         </div>
 </body>
 </html>
